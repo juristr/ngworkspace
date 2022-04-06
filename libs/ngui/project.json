@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/ngui",
+  "sourceRoot": "libs/ngui/src",
+  "prefix": "ngworkspace",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ngui"],
+      "options": {
+        "jestConfig": "libs/ngui/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ngui/src/**/*.ts", "libs/ngui/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
