@@ -3,6 +3,7 @@
   "projects": {
     "demoapp": "apps/demoapp",
     "demoapp-e2e": "apps/demoapp-e2e",
-    "ngui": "libs/ngui"
+    "ngui": "libs/ngui",
+    "ngui-e2e": "apps/ngui-e2e"
   }
 }

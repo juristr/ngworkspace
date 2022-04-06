@@ -1,0 +1,28 @@
+{
+  "root": "apps/ngui-e2e",
+  "sourceRoot": "apps/ngui-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ngui-e2e/cypress.json",
+        "devServerTarget": "ngui:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "ngui:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ngui-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ngui"]
+}
